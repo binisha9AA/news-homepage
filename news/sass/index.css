@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.438rem;
+  background-color: none;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: hsl(236, 13%, 42%);
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.menu a:hover {
+  color: hsl(5, 85%, 63%);
+  transition: all 0.5s ease;
+}
+
+.neww a {
+  text-decoration: none;
+  color: hsl(36, 100%, 99%);
+  font-weight: 700;
+  font-size: 20px;
+}
+.neww :hover {
+  color: hsl(35, 77%, 62%);
+  transition: all 0.5s ease;
+}
+
+.countdesc a {
+  color: hsl(240, 100%, 5%);
+  font-size: 20px;
+  font-weight: 700;
+  margin-block: 0.688rem;
+  text-decoration: none;
+}
+.countdesc :hover {
+  transition: all 0.5s ease;
+  color: hsl(5, 85%, 63%);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background-color: black;
+}
+
+.main_component {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  color: hsl(35, 77%, 62%);
+  margin-block: 1.23rem;
+  font-weight: 800;
+  font-size: 1.688rem;
+}
+
+button {
+  width: 150px;
+  height: 46px;
+  color: hsl(36, 100%, 99%);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: hsl(5, 85%, 63%);
+}
+
+button:hover {
+  color: white;
+  background-color: hsl(240, 100%, 5%);
+}
+
+.rightpara {
+  margin-block: 1.25rem;
+  color: hsl(233, 8%, 79%);
+}
+
+.horizontalline {
+  border-bottom: 2px solid hsl(233, 8%, 79%);
+  margin-block: 1.25rem;
+  opacity: 0.5;
+}
+
+h3 {
+  color: hsl(36, 100%, 99%);
+}
+
+h1 {
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  font-size: 2rem;
+  margin-block: 1.25rem;
+}
+
+.right_card {
+  margin-block: 1.25rem;
+  padding: 1.188rem;
+  background-color: hsl(240, 91%, 9%);
+}
+
+p:first-child {
+  margin-block: 1.25rem;
+  color: hsl(236, 13%, 42%);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .menu a {
+    margin: 10px;
+  }
+  .hamburger {
+    display: block;
+    background: white;
+  }
+}
+.big_text {
+  width: max-width;
+}
+
+.main_component {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.top_left {
+  background-image: url("./assets/images/image-web-3-desktop.jpg");
+  background-repeat: no-repeat;
+}
+
+.top_left img {
+  width: 100%;
+}
+
+.footer_container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.count {
+  color: hsl(233, 8%, 79%);
+  margin: 0;
+}
+
+.countpara {
+  color: hsl(236, 13%, 42%);
+}
+
+.footer_container {
+  gap: 12px;
+  margin-block: 2.188rem;
+}
+
+.footer_column1 {
+  display: grid;
+  place-content: center;
+}
+
+.footer_column1 img {
+  width: 6.375rem;
+  height: 8.188rem;
+}
+
+.footer_column2 {
+  margin: 8px;
+}
+
+@media (min-width: 780px) {
+  .main_component {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    gap: 1.688rem;
+  }
+  .right_card {
+    margin: 0;
+    width: 18.625rem;
+    padding: 1.188rem;
+    background-color: hsl(240, 91%, 9%);
+  }
+  .top_left img {
+    width: 37.938rem;
+    height: 15.625rem;
+  }
+  .left_card, .right_card {
+    flex-basis: 50%;
+  }
+  .bottom_left {
+    display: flex;
+    margin-block: 0.75rem;
+  }
+  .big_text, .description {
+    flex-basis: 50%;
+  }
+  .footer {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-basis: 50%;
+  }
+}/*# sourceMappingURL=index.css.map */

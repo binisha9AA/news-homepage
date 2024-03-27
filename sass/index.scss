@@ -1,0 +1,272 @@
+@use './colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@mixin margin() {
+  margin-block: 1.25rem;
+}
+@mixin flex() {
+  flex-basis: 50%;
+}
+@mixin displayflex() {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+// .mobile_menu {
+//   display: none;
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 70%;
+//   z-index: 100;
+//   background-color: rgb(255, 255, 255);
+//   border-left: 1px solid black;
+//   box-shadow: 1px 0 6px rgb(6, 6, 6);
+// }
+
+.navbar {
+  @include displayflex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.438rem;
+  background-color: none;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.menu {
+  display: flex;
+}
+.menu.show{
+  display: none;
+}
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: colors.$Dark-grayish-blue;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.menu a:hover {
+  color: colors.$Soft-red;
+  transition: all 0.5s ease;
+}
+.neww {
+  a {
+    text-decoration: none;
+    color: colors.$Off-white;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  :hover {
+    color: colors.$Soft-orange;
+    transition: all 0.5s ease;
+  }
+}
+.countdesc {
+  a {
+    color: colors.$Very-dark-blue;
+    font-size: 20px;
+    font-weight: 700;
+    margin-block: 0.688rem;
+    text-decoration: none;
+  }
+  :hover {
+    transition: all 0.5s ease;
+    color: colors.$Soft-red;
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background-color: black;
+}
+.main_component {
+  width: 80%;
+  margin: 0 auto;
+}
+h2 {
+  color: colors.$Soft-orange;
+  margin-block: 1.23rem;
+  font-weight: 800;
+  font-size: 1.688rem;
+}
+button {
+  width: 150px;
+  height: 46px;
+  color: colors.$Off-white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: colors.$Soft-red;
+}
+button:hover {
+  color: white;
+  background-color: colors.$Very-dark-blue;
+}
+
+.rightpara {
+  @include margin;
+  color: colors.$Grayish-blue;
+}
+.horizontalline {
+  border-bottom: 2px solid colors.$Grayish-blue;
+  @include margin;
+  opacity: 0.5;
+}
+h3 {
+  color: colors.$Off-white;
+}
+h1 {
+  color: colors.$Very-dark-blue;
+  font-weight: 800;
+  font-size: 2rem;
+  @include margin;
+}
+.right_card {
+  margin-block: 1.25rem;
+  padding: 1.188rem;
+  background-color: colors.$blueish;
+}
+p:first-child {
+  @include margin;
+  color: colors.$Dark-grayish-blue;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    z-index: 1;
+  }
+}
+
+.menu.show {
+  display: block;
+}
+.menu a {
+  margin: 10px;
+  background-color: white;
+  color: black;
+}
+
+.hamburger {
+  display: block;
+  background: white;
+}
+
+.big_text {
+  width: max-width;
+}
+
+.main_component {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.top_left {
+  background-image: url('./assets/images/image-web-3-desktop.jpg');
+  background-repeat: no-repeat;
+}
+
+.top_left img {
+  width: 100%;
+}
+.footer_container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.count {
+  color: colors.$Grayish-blue;
+  margin: 0;
+}
+// .countdesc{
+//   color:colors.$Very-dark-blue;
+//   font-size: 20px;
+//   font-weight: 700;
+//   margin-block:0.688rem;
+// }
+.countpara {
+  color: colors.$Dark-grayish-blue;
+}
+.footer_container {
+  gap: 12px;
+  margin-block: 2.188rem;
+}
+.footer_column1 {
+  display: grid;
+  place-content: center;
+}
+.footer_column1 img {
+  width: 6.375rem;
+  height: 8.188rem;
+}
+.footer_column2 {
+  margin: 8px;
+}
+
+@media (min-width: 780px) {
+  .main_component {
+    @include displayflex;
+    gap: 1.688rem;
+  }
+ 
+  .right_card {
+    margin: 0;
+    width: 18.625rem;
+    padding: 1.188rem;
+    background-color: colors.$blueish;
+  }
+  .top_left img {
+    width: 37.938rem;
+    height: 15.625rem;
+  }
+  .left_card,
+  .right_card {
+    flex-basis: 50%;
+  }
+  .bottom_left {
+    display: flex;
+    margin-block: 0.75rem;
+  }
+  .big_text,
+  .description {
+    flex-basis: 50%;
+  }
+  .footer {
+    @include displayflex;
+    @include flex;
+  }
+}
+
